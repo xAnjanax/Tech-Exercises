@@ -14,4 +14,3 @@ int main()
     return 0;
 }
 
-// 15 : 15 ltrs per min, 8 mins, 20 litres leak out, how much water is left
