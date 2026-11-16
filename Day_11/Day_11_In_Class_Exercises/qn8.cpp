@@ -5,23 +5,20 @@ int greatestScore(int a, int b, int c);
 
 int greatestScore(int a, int b, int c)
 {
-    if (a >= b)
+    if ((a >= b) and (a >= c))
     {
-        if (a >= c)
-            // cout << a << " is the greatest." << endl;
-            return a;
+        // cout << a << " is the greatest." << endl;
+        return a;
     }
-    else if (b >= c)
+    else if ((b >= c) and (b >= a))
     {
-        if (b >= a)
-            // cout << b << " is the greatest." << endl;
-            return b;
+        // cout << b << " is the greatest." << endl;
+        return b;
     }
-    else if (c >= a)
+    else if ((c >= a) and (c >= b))
     {
-        if (c >= b)
-            // cout << c << " is the greatest." << endl;
-            return c;
+        // cout << c << " is the greatest." << endl;
+        return c;
     }
     return 0;
 }
