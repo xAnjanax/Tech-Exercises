@@ -1,19 +1,31 @@
+// qn 3 can be written
+
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int target = 1000;
-    int start_population_cells = 5;
-    int i = start_population_cells, count = 0;
+    // Readings = 18, 21, 19, 23, 20,
+    int num_measurements = 5;
+    int arr[5];
+    int temp;
 
-    while (i <= target)
+    for (int i = 0; i < 5; i++)
     {
-        i = i * 2;
-        count += 1;
-        // cout << i << endl;
+        cout << "Enter Reading " << i << ": ";
+        cin >> temp;
+        arr[i] = temp;
+        // cout << endl;
+        cout << "Checking Value: " << arr[i] << endl;
+        cout << endl;
     }
 
-    cout << "Hours: " << count << endl;
-    cout << "Cells: " << i << endl;
+    cout << "Readings List: ";
+
+    for (int i = 0; i < 5; i++)
+    {
+        cout << arr[i] << " ";
+    }
+
+    cout << endl;
 }

@@ -1,20 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int addScores(int first, int second);
+void printOrder(int items);
 
-int addScores(int first, int second)
+void printOrder(int items)
 {
-    int total = first + second;
-    // cout << total << endl;
-    return total;
+    if (items >= 10)
+    {
+        // int extraBoxes = items - 10; // gives number of items remaining
+        // int extraBoxes = 1; // setting extraBoxes to 1
+        int extraBoxes = items / 10;
+        cout << extraBoxes << " / ";
+    }
+    cout << items << endl;
 }
 
 int main()
 {
-    int num1, num2;
-    cin >> num1 >> num2;
-
-    int sum = addScores(num1, num2);
-    cout << sum << endl;
+    int num_of_items;
+    cin >> num_of_items;
+    printOrder(num_of_items);
 }

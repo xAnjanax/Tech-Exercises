@@ -1,24 +1,21 @@
 #include <iostream>
 using namespace std;
 
-int countEvenTickets(int n);
+void showAmounts(int amount);
 
-int countEvenTickets(int n)
+void showAmounts(int amount)
 {
-    int count = 0;
-    for (int i = 1; i <= n; i++)
+    if (amount > 0)
     {
-        if (i % 2 == 0)
-            count++;
+        int amount = 2; // for the number of free samples
+        cout << amount << " / ";
     }
-    return count;
+    cout << amount << endl;
 }
 
 int main()
 {
-    int n;
-    cin >> n;
-    int num_of_even_numbered_tickets = countEvenTickets(n);
-
-    cout << num_of_even_numbered_tickets << endl;
+    int amt;
+    cin >> amt;
+    showAmounts(amt);
 }

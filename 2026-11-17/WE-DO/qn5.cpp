@@ -1,21 +1,20 @@
 #include <iostream>
 using namespace std;
 
-int readChoice();
+const int hallCapacity = 30;
 
-int readChoice()
+int remainingSeats(int occupied);
+
+int remainingSeats(int occupied)
 {
-    int choice;
-    cin >> choice;
-    while ((choice != 1) and (choice != 2))
-    {
-        cout << "Please enter a choice of 1 or 2: ";
-        cin >> choice;
-    }
-    return choice;
+    int rem_seats = hallCapacity - occupied;
+    return rem_seats;
 }
 
 int main()
 {
-    cout << readChoice() << endl;
+    int num_of_occupied_seats;
+    cin >> num_of_occupied_seats;
+
+    cout << hallCapacity << " / " << remainingSeats(num_of_occupied_seats) << endl;
 }

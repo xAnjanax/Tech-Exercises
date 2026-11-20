@@ -1,16 +1,21 @@
 #include <iostream>
 using namespace std;
 
+int readChoice();
+
+int readChoice()
+{
+    int choice;
+    cin >> choice;
+    while ((choice != 1) and (choice != 2))
+    {
+        cout << "Please enter a choice of 1 or 2: ";
+        cin >> choice;
+    }
+    return choice;
+}
+
 int main()
 {
-    string color, target_substring;
-    getline(cin, color);
-    int position = color.find("blue");
-
-    if (position)
-    {
-        target_substring = color.substr(position);
-    }
-
-    cout << target_substring << endl;
+    cout << readChoice() << endl;
 }

@@ -1,28 +1,23 @@
-// Incorrect output with first week ... 0 weeks due to initialization outside the loop
-
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int amt_to_be_saved = 50; // rupees
-    int start_amt = 50;
-    int amt_added_per_week = 20; // +20 rupees per week
+    int slot_holder[7] = {10, 15, 20, 30, 40, 50, 60};
+    int cancelled_ticket = 15;
 
-    int final_amt = start_amt;
-    int temp_amt = start_amt;
-    int weeks_count = 0;
-    int savings = 0;
-
-    while (final_amt < amt_to_be_saved)
+    for (int index = 0; index < 4; index++)
     {
-        temp_amt += amt_added_per_week;
-        final_amt += temp_amt;
-        // cout << "Temp Amount Rn: " << temp_amt << endl;
-        // cout << "Final Amount Rn: " << final_amt << endl;
-        weeks_count += 1;
+        if (slot_holder[index] == cancelled_ticket)
+        {
+            slot_holder[index] = slot_holder[index + 1];
+            slot_holder[index + 1] = slot_holder[index + 2];
+        }
     }
 
-    cout << "Weeks = " << weeks_count << endl;
-    cout << "Savings = " << final_amt << endl;
+    for (int index = 0; index < 7; index++)
+    {
+        cout << slot_holder[index] << " ";
+    }
+    cout << endl;
 }

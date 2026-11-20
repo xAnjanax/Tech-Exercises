@@ -3,17 +3,23 @@ using namespace std;
 
 int main()
 {
-    int sum_of_odd_squares = 0;
-    int even_card_count = 0;
+    int arr[5] = {28, 31, 26, 30, 29};
+    int length = sizeof(arr) / sizeof(arr[0]);
 
-    for (int i = 1; i <= 10; i++)
+    cout << "Array before change: " << endl;
+    for (int i = 0; i <= length - 1; i++)
     {
-        if (i % 2 == 0)
-            even_card_count++;
-        else
-            sum_of_odd_squares += (i * i);
+        cout << arr[i] << " ";
+    }
+    arr[2] = 32;
+
+    cout << endl;
+    cout << "Array after change: " << endl;
+
+    for (int i = 0; i <= length - 1; i++)
+    {
+        cout << arr[i] << " ";
     }
 
-    cout << "Sum of Odd Squares: " << sum_of_odd_squares << endl;
-    cout << "Number of Even Cards: " << even_card_count << endl;
+    cout << endl;
 }

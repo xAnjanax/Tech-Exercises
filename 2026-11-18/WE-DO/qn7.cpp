@@ -1,24 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int twice(int amount);
-
-double twice(double amount);
-
-int twice(int amount)
-{
-    return 2 * amount;
-}
-
-double twice(double amount)
-{
-    return 2.0 * amount;
-}
-
 int main()
 {
-    int amt_int;
-    double amt_dbl;
-    cin >> amt_int >> amt_dbl;
-    cout << twice(amt_int) << " " << twice(amt_dbl) << endl;
+    int readings_array[4];
+    int num_of_readings = sizeof(readings_array) / sizeof(readings_array[0]);
+
+    for (int index = 0; index < num_of_readings; index++)
+    {
+        cin >> readings_array[index];
+    }
+
+    int *pointer_to_first_element = readings_array;
+    int offset;
+    cin >> offset;
+
+    int selected_reading;
+    // selected_reading = *pointer_to_first_element + offset; // adds 2 to the first element
+
+    selected_reading = *(pointer_to_first_element + offset);
+    cout << selected_reading << endl;
 }

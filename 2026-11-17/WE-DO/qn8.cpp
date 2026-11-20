@@ -1,31 +1,17 @@
 #include <iostream>
 using namespace std;
 
-int greatestScore(int a, int b, int c);
+int previewBalance(int balance, int cost);
 
-int greatestScore(int a, int b, int c)
+int previewBalance(int balance, int cost)
 {
-    if ((a >= b) and (a >= c))
-    {
-        // cout << a << " is the greatest." << endl;
-        return a;
-    }
-    else if ((b >= c) and (b >= a))
-    {
-        // cout << b << " is the greatest." << endl;
-        return b;
-    }
-    else if ((c >= a) and (c >= b))
-    {
-        // cout << c << " is the greatest." << endl;
-        return c;
-    }
-    return 0;
+    int new_bal = balance - cost;
+    return new_bal;
 }
 
 int main()
 {
-    int a1, b1, c1;
-    cin >> a1 >> b1 >> c1;
-    cout << greatestScore(a1, b1, c1) << endl;
+    int current_bal, current_cost;
+    cin >> current_bal >> current_cost;
+    cout << current_bal << " " << previewBalance(current_bal, current_cost) << endl;
 }

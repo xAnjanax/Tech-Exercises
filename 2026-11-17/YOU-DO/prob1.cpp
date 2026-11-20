@@ -1,31 +1,18 @@
-// Question 1 
-
 #include <iostream>
 using namespace std;
 
-bool isPrime(int number);
+int previewTickerPrice(int price);
 
-bool isPrime(int number)
+int previewTicketPrice(int price)
 {
-    if (number <= 1)
-        return false;
-
-    for (int i = 2; i * i <= number; i++)
-    {
-        if (number % i == 0)
-            return false;
-    }
-
-    return true;
+    int fee = 20;
+    return (price + fee);
 }
 
 int main()
 {
-    int num;
-    cin >> num;
+    int original_price;
+    cin >> original_price;
 
-    if (isPrime(num))
-        cout << "Prime" << endl;
-    else
-        cout << "Not prime" << endl;
+    cout << original_price << " " << previewTicketPrice(original_price) << endl;
 }

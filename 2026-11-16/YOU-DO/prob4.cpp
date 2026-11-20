@@ -1,13 +1,18 @@
 #include <iostream>
 using namespace std;
 
+int sum(int first, int second);
+
+int sum(int first, int second)
+{
+    int sum = first + second;
+    return sum;
+}
+
 int main()
 {
-    string full_name;
-    getline(cin, full_name);
-
-    int position = full_name.find(' ');
-    string target_string = full_name.substr(position + 1);
-
-    cout << target_string << endl;
+    int day_1, day_2, total;
+    cin >> day_1 >> day_2;
+    total = sum(day_1, day_2);
+    cout << total << endl;
 }

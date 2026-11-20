@@ -1,19 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void showSeats(int seats);
-
-void showSeats(int seats)
-{
-    cout << seats << endl;
-}
-
 int main()
 {
-    int rowSeats;
-    cin >> rowSeats;
-
-    showSeats(rowSeats);
+    int seat_number = 0;
+    cin >> seat_number;
+    int *pointer = nullptr;
+    if (seat_number > 0)
+        pointer = &seat_number;
+    if (pointer)
+        cout << *pointer;
+    else
+        cout << "No seat";
+    cout << endl;
 }
-
-// seats can be used only within the showSeats function, and the main() function uses rowSeats.

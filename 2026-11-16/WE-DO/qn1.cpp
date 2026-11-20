@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
-#include <string>
+
+void showWelcome();
+
+void showWelcome()
+{
+    cout << "Welcome to the Coding Club!" << endl;
+}
 
 int main()
 {
-    string name;
-    cin >> name; // output: Anu
-
-    // std::getline(cin, name); // output: Anu Priya
-    cout << name << endl;
-}
+    showWelcome();
+} 

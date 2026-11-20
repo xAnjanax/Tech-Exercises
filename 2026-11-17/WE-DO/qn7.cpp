@@ -1,18 +1,24 @@
 #include <iostream>
-#include <cstdlib>
 using namespace std;
 
-int temperatureGap(int first, int second);
+int twice(int amount);
 
-int temperatureGap(int first, int second)
+double twice(double amount);
+
+int twice(int amount)
 {
-    int difference = abs(second - first);
-    return difference;
+    return 2 * amount;
+}
+
+double twice(double amount)
+{
+    return 2.0 * amount;
 }
 
 int main()
 {
-    int first_temp, second_temp;
-    cin >> first_temp >> second_temp;
-    cout << temperatureGap(first_temp, second_temp) << endl;
+    int amt_int;
+    double amt_dbl;
+    cin >> amt_int >> amt_dbl;
+    cout << twice(amt_int) << " " << twice(amt_dbl) << endl;
 }

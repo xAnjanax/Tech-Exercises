@@ -1,14 +1,20 @@
 #include <iostream>
 using namespace std;
 
+int addScores(int first, int second);
+
+int addScores(int first, int second)
+{
+    int total = first + second;
+    // cout << total << endl;
+    return total;
+}
+
 int main()
 {
-    string word = "MANGO";
-    int length = word.size();
+    int num1, num2;
+    cin >> num1 >> num2;
 
-    cout << length << endl;
-    cout << word[0] << endl;
-    cout << word[2] << endl;
-    cout << word[length - 1] << endl;
-    cout << word[5] << endl; // no output : out of bounds
+    int sum = addScores(num1, num2);
+    cout << sum << endl;
 }

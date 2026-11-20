@@ -1,37 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int productOfDigits(int number);
+int parcelCharge(int parcels);
 
-int productOfDigits(int number)
+int parcelCharge(int parcels, int fee);
+
+int parcelCharge(int parcels)
 {
-    int product;
-    int temp, count = 0;
-    while (product / 10 != 0)
-    {
-        product = 1;
-        if (number / 10 != 0)
-        {
-            while (number != 0)
-            {
-                temp = number % 10;
-                product *= temp;
-                number /= 10;
-            }
-            count += 1;
-            number = product;
-        }
-        product = number;
-    }
-    cout << "Final digit: " << product << ", rounds " << count << endl;
-    return 0;
+    return (parcels * 10);
+}
+
+int parcelCharge(int parcels, int fee)
+{
+    return ((parcels * 10) + fee);
 }
 
 int main()
 {
-    int num, prod, rounds;
-    // prod, rounds = productOfDigits(num);
-    cin >> num;
-    productOfDigits(num);
-    // cout << "Final digit: " << prod << ", rounds " << rounds << endl;
+    int num_of_parcels, fee_amt;
+    cin >> num_of_parcels >> fee_amt;
+    cout << parcelCharge(num_of_parcels) << " " << parcelCharge(num_of_parcels, fee_amt) << endl;
 }

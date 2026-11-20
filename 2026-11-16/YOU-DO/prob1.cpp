@@ -1,11 +1,31 @@
+// Question 1 
+
 #include <iostream>
 using namespace std;
 
+bool isPrime(int number);
+
+bool isPrime(int number)
+{
+    if (number <= 1)
+        return false;
+
+    for (int i = 2; i * i <= number; i++)
+    {
+        if (number % i == 0)
+            return false;
+    }
+
+    return true;
+}
+
 int main()
 {
-    string city_name;
-    getline(cin, city_name);
-    int space_taken = city_name.size();
+    int num;
+    cin >> num;
 
-    cout << space_taken << endl;
+    if (isPrime(num))
+        cout << "Prime" << endl;
+    else
+        cout << "Not prime" << endl;
 }

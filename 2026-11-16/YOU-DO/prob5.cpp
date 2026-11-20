@@ -1,21 +1,18 @@
 #include <iostream>
-#include <string>
 using namespace std;
+
+double areaOfTriangle(double base, double height);
+
+double areaOfTriangle(double base, double height)
+{
+    double area = (base * height) / 2;
+    return area;
+}
 
 int main()
 {
-    string label;
-    getline(cin, label);
-
-    label.insert(label.size(), "S");
-    cout << "Upon adding S: " << endl;
-    cout << label << endl;
-
-    label.erase(label.size() - 1);
-    cout << "Upon removing S: " << endl;
-    cout << label << endl;
-
-    label.replace(0, 1, "B");
-    cout << "Upon replacing C: " << endl;
-    cout << label << endl;
+    double base_val, height_val, area;
+    cin >> base_val >> height_val;
+    area = areaOfTriangle(base_val, height_val);
+    cout << area << endl;
 }

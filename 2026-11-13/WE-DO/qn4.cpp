@@ -1,31 +1,24 @@
-// qn 3 can be written
+// Arrays continuation
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    // Readings = 18, 21, 19, 23, 20,
-    int num_measurements = 5;
-    int arr[5];
-    int temp;
+    int quiz_marks[5] = {70, 45, 90, 60, 80};
+    int index_1, index_2;
 
-    for (int i = 0; i < 5; i++)
-    {
-        cout << "Enter Reading " << i << ": ";
-        cin >> temp;
-        arr[i] = temp;
-        // cout << endl;
-        cout << "Checking Value: " << arr[i] << endl;
-        cout << endl;
-    }
+    // No need for a for loop
+    // for (int index = 0; index < 5; index++)
+    // {
+    //     if (index == 2 or index == 4)
+    //         cout << quiz_marks[index] << " ";
+    // }
 
-    cout << "Readings List: ";
+    cout << "Enter index 1: ";
+    cin >> index_1;
+    cout << "Enter index 2: ";
+    cin >> index_2;
 
-    for (int i = 0; i < 5; i++)
-    {
-        cout << arr[i] << " ";
-    }
-
-    cout << endl;
+    cout << quiz_marks[index_1] << " " << quiz_marks[index_2] << endl;
 }

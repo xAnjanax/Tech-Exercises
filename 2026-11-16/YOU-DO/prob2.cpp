@@ -1,13 +1,24 @@
 #include <iostream>
 using namespace std;
 
+int sumDigits(int number);
+
+int sumDigits(int number)
+{
+    int sum = 0, temp;
+    while (number != 0)
+    {
+        temp = number % 10;
+        sum += temp;
+        number /= 10;
+    }
+    return sum;
+}
+
 int main()
 {
-    string word;
-    getline(cin, word);
+    int num;
+    cin >> num;
 
-    for (int index = 0; index < word.size(); index++)
-    {
-        cout << word[index] << " : " << index << endl;
-    }
+    cout << sumDigits(num) << endl;
 }

@@ -1,24 +1,19 @@
 #include <iostream>
 using namespace std;
 
-int sumDigits(int number);
+void showDemoMarks();
 
-int sumDigits(int number)
+void showDemoMarks()
 {
-    int sum = 0, temp;
-    while (number != 0)
-    {
-        temp = number % 10;
-        sum += temp;
-        number /= 10;
-    }
-    return sum;
+    int marks = 50;
+    cout << marks;
 }
 
 int main()
 {
-    int num;
-    cin >> num;
+    int input_mark;
+    cin >> input_mark;
 
-    cout << sumDigits(num) << endl;
+    showDemoMarks();
+    cout << " / " << input_mark << endl;
 }

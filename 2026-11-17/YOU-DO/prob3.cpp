@@ -1,16 +1,24 @@
 #include <iostream>
 using namespace std;
 
-void sayHello(string name);
+int payableAmount(int bill);
 
-void sayHello(string name)
+int payableAmount(int bill)
 {
-    cout << "Hello, " << name << "!" << endl;
+    int new_bill = bill;
+    if (bill >= 500)
+    {
+        int discount = 50;
+        new_bill = bill - discount;
+    }
+    return new_bill;
 }
 
 int main()
 {
-    string full_name;
-    getline(cin, full_name);
-    sayHello(full_name);
+    int bill_input;
+    cin >> bill_input;
+    cout << payableAmount(bill_input) << endl;
 }
+
+// Discount is within the if block scope, checking whether the value of the bill is atleast 500.

@@ -1,18 +1,23 @@
 #include <iostream>
 using namespace std;
 
-int sum(int first, int second);
+int area(int side);
 
-int sum(int first, int second)
+int area(int length, int width);
+
+int area(int side)
 {
-    int sum = first + second;
-    return sum;
+    return side * side;
+}
+
+int area(int length, int width)
+{
+    return length * width;
 }
 
 int main()
 {
-    int day_1, day_2, total;
-    cin >> day_1 >> day_2;
-    total = sum(day_1, day_2);
-    cout << total << endl;
+    int side_input, length_input, width_input;
+    cin >> side_input >> length_input >> width_input;
+    cout << area(side_input) << " " << area(length_input, width_input) << endl;
 }

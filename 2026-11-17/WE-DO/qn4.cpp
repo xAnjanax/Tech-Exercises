@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
 
-double triangleArea(double base, double height);
+void showSeats(int seats);
 
-double triangleArea(double base, double height)
+void showSeats(int seats)
 {
-    double area = base * height / (2);
-    return area;
+    cout << seats << endl;
 }
 
 int main()
 {
-    double base_inp, height_inp;
-    cin >> base_inp >> height_inp;
-    cout << triangleArea(base_inp, height_inp) << endl;
+    int rowSeats;
+    cin >> rowSeats;
+
+    showSeats(rowSeats);
 }
+
+// seats can be used only within the showSeats function, and the main() function uses rowSeats.

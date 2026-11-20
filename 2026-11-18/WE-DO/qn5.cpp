@@ -1,20 +1,21 @@
 #include <iostream>
 using namespace std;
 
-const int hallCapacity = 30;
-
-int remainingSeats(int occupied);
-
-int remainingSeats(int occupied)
-{
-    int rem_seats = hallCapacity - occupied;
-    return rem_seats;
-}
-
 int main()
 {
-    int num_of_occupied_seats;
-    cin >> num_of_occupied_seats;
+    int tag_of_equipment;
+    char letter;
 
-    cout << hallCapacity << " / " << remainingSeats(num_of_occupied_seats) << endl;
+    cin >> tag_of_equipment >> letter;
+    void *pointer = &tag_of_equipment;
+
+    // pointer = (int *)(pointer);
+    // cout << *(&pointer) << " ";
+
+    cout << *(int *)(pointer) << " ";
+
+    // pointer = (char *)(pointer);
+    pointer = &letter;
+    cout << *(char *)(pointer) << endl;
+    // cout << *(&pointer) << endl;
 }

@@ -1,23 +1,30 @@
 #include <iostream>
 using namespace std;
 
-int parcelCharge(int parcels);
-
-int parcelCharge(int parcels, int fee);
-
-int parcelCharge(int parcels)
-{
-    return (parcels * 10);
-}
-
-int parcelCharge(int parcels, int fee)
-{
-    return ((parcels * 10) + fee);
-}
-
 int main()
 {
-    int num_of_parcels, fee_amt;
-    cin >> num_of_parcels >> fee_amt;
-    cout << parcelCharge(num_of_parcels) << " " << parcelCharge(num_of_parcels, fee_amt) << endl;
+    int rack_slots[6];
+    int num_of_slots = sizeof(rack_slots) / sizeof(rack_slots[0]);
+    int *ptr = rack_slots;
+
+    for (int index = 0; index < num_of_slots; index++)
+    {
+        cin >> rack_slots[index];
+    }
+
+    for (int index = 0; index < num_of_slots; index++)
+    {
+        int temp_val = *(ptr + index);
+        if (index + 1 == num_of_slots)
+        {
+            cout << -1;
+        }
+        if ((temp_val) == 0)
+        {
+            cout << index;
+            break;
+        }
+    }
+
+    cout << endl;
 }

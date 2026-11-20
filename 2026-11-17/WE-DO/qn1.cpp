@@ -1,14 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void showWelcome();
+int addBonus(int score);
 
-void showWelcome()
+int addBonus(int score)
 {
-    cout << "Welcome to the Coding Club!" << endl;
+    int score_copy = score;
+    return (score_copy + 5);
 }
 
 int main()
 {
-    showWelcome();
-} 
+    int score_inp;
+    cin >> score_inp;
+
+    cout << score_inp << " " << addBonus(score_inp) << endl;
+}

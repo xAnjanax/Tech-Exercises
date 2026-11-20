@@ -1,21 +1,16 @@
-// Arrays continuation
-
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int items_sold_list[5]; // = {8, 12, 6, 14, 10};
-    int num_items_sold = sizeof(items_sold_list) / sizeof(items_sold_list[0]);
+    string color, target_substring;
+    getline(cin, color);
+    int position = color.find("blue");
 
-    for (int index = 0; index < num_items_sold; index++)
+    if (position)
     {
-        cin >> items_sold_list[index];
+        target_substring = color.substr(position);
     }
 
-    for (int index = 0; index < num_items_sold; index++)
-    {
-        cout << items_sold_list[index] << " ";
-    }
-    cout << endl;
+    cout << target_substring << endl;
 }

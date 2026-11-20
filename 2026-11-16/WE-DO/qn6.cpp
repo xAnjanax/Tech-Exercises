@@ -1,17 +1,12 @@
 #include <iostream>
-#include <string>
+#include <cmath>
 using namespace std;
 
 int main()
 {
-    string book_title;
-    getline(cin, book_title);
-    // std::string title = "The Jungle Book"; // same output
+    int area_of_square_tiles, side_length;
+    cin >> area_of_square_tiles;
 
-    // cout << title << endl;
-    cout << book_title << endl;
+    side_length = sqrt(area_of_square_tiles);
+    cout << side_length << endl;
 }
-
-// What do std and :: mean?
-// std is the name of the standard library space
-// :: is the scope resolution operator, instructs the compiler to look into the namespace for a specific feature.

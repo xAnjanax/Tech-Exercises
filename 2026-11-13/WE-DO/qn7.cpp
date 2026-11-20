@@ -3,21 +3,32 @@ using namespace std;
 
 int main()
 {
-    int slot_holder[7] = {10, 15, 20, 30, 40, 50, 60};
-    int cancelled_ticket = 15;
+    int student_ids[6];
+    int num_of_ids = sizeof(student_ids) / sizeof(student_ids[0]);
+    int target_value;
 
-    for (int index = 0; index < 4; index++)
+    cout << "IDs: " << endl;
+
+    for (int index = 0; index < num_of_ids; index++)
     {
-        if (slot_holder[index] == cancelled_ticket)
-        {
-            slot_holder[index] = slot_holder[index + 1];
-            slot_holder[index + 1] = slot_holder[index + 2];
-        }
+        cin >> student_ids[index];
     }
 
-    for (int index = 0; index < 7; index++)
+    cout << "Target: ";
+    cin >> target_value;
+
+    for (int index = 0; index < num_of_ids; index++)
     {
-        cout << slot_holder[index] << " ";
+        if (student_ids[index] == target_value)
+        {
+            cout << index;
+            break;
+        }
+        else
+        {
+            cout << -1;
+            break;
+        }
     }
     cout << endl;
 }
